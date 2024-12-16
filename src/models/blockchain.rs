@@ -4,3 +4,6 @@ pub struct Blockchain {
     blocks: Vec<Block>,
 
 }
+impl Blockchain {
+    // TODO
+}
