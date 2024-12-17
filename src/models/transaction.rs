@@ -1,3 +1,5 @@
+use std::fmt;
+use std::fmt::Formatter;
 use serde::Serialize;
 use sha2::Sha256;
 use crate::tools::hash::hash::hash;
@@ -21,5 +23,11 @@ impl Transaction {
     pub fn hash(&self) -> Result<String, serde_json::error::Error> {
         let serialized = serde_json::to_string(self)?;
         Ok(hash(serialized.as_bytes()))
+    }
+}
+
+impl fmt::Display for Transaction {
+    fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
+        write!(f, "Transaction: amount:{}, from:{}, to:{}", self.amount, self.from, self.to)
     }
 }

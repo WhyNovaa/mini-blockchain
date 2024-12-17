@@ -8,7 +8,7 @@ pub struct Block {
     transactions: Vec<Transaction>,
 }
 
-impl Block {
+/*impl Block {
     pub fn new(parent_hash: String, transactions: Vec<Transaction>, ) -> Self {
         // TODO
         let header = Header::new(parent_hash, );
@@ -17,4 +17,4 @@ impl Block {
 
         }
     }
-}
+}*/
