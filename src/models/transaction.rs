@@ -4,7 +4,7 @@ use serde::Serialize;
 use sha2::Sha256;
 use crate::tools::hash::hash::hash;
 
-#[derive(Serialize)]
+#[derive(Serialize, Clone, Debug)]
 pub struct Transaction {
     pub amount: u128,
     pub from: String,

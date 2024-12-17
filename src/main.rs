@@ -1,9 +1,10 @@
-use crate::models::transaction::Transaction;
-use crate::tools::hash::merkle_hash::merkle_hash;
+use crate::models::blockchain::Blockchain;
 
 mod models;
 mod tools;
 
 fn main() {
+    let blockchain = Blockchain::new(6);
+
 
 }
