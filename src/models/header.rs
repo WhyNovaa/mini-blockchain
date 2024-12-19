@@ -23,7 +23,7 @@ impl Header {
 
 impl fmt::Display for Header {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
-        write!(f, "parent_hash: {}\n, merkle_hash: {}\n, timestamp: {}\n, nonce: {}\n, difficulty: {}\n",
+        write!(f, "\t\tparent_hash: {},\n \t\tmerkle_hash: {},\n \t\ttimestamp: {},\n \t\tnonce: {},\n \t\tdifficulty: {},\n",
                self.parent_hash, self.merkle_hash, self.timestamp, self.nonce, self.difficulty
         )
     }

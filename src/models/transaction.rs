@@ -1,7 +1,6 @@
 use std::fmt;
 use std::fmt::Formatter;
 use serde::Serialize;
-use sha2::Sha256;
 use crate::tools::hash::hash::hash;
 
 #[derive(Serialize, Clone, Debug)]

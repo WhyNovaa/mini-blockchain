@@ -1,8 +1,9 @@
 use crate::models::block::Block;
+use crate::models::blockchain_errors::BlockError;
 use crate::models::transaction::Transaction;
 
 pub struct Blockchain {
-    blocks: Vec<Block>,
+    pub blocks: Vec<Block>,
     difficulty: usize,
 }
 impl Blockchain {
@@ -15,4 +16,14 @@ impl Blockchain {
             difficulty,
         }
     }
+
+    pub fn add_block(&mut self, block: Block) {
+        self.blocks.push(block);
+    }
+
+    pub fn increase_difficulty(&mut self) {
+        self.difficulty += 1;
+    }
+
+    //pub fn add_block_(&self) {}
 }
