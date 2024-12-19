@@ -38,7 +38,7 @@ impl Block {
 
         loop {
             println!("{nonce}: Mining...");
-            let hash = Self::calculate_hash(parent_hash.clone(), merkle_hash.clone(), timestamp, nonce);
+            let hash = calculate_hash(parent_hash.clone(), merkle_hash.clone(), timestamp, nonce);
 
             if is_valid_hash(hash.clone(), difficulty) {
                 println!("Found hash: {}, nonce: {}", hash, nonce);
